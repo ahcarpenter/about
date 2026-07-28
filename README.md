@@ -2,8 +2,18 @@
 
 Personal site of [Andrew H. Carpenter](https://github.com/ahcarpenter) — built
 with Next.js (App Router, static export) and Tailwind CSS v4, deployed to
-GitHub Pages. Light-mode-only theme inspired by [conductor.build](https://conductor.build):
-warm cream paper, serif display type (Fraunces), terracotta accent.
+GitHub Pages. Light-mode-only theme: warm-neutral paper (`#E2E1DC`), serif
+display type (Fraunces), electric-blue accent for links, plum for primary
+buttons, magenta for the chat CTA and source dots. Buttons are pushable —
+a solid darker edge sits under the face, which travels on hover and press.
+
+Colors live entirely in the `@theme` block of `app/globals.css` as OKLCH
+tokens — Tailwind v4 is CSS-first here, there is no `tailwind.config`.
+`app/theme.test.ts` guards them: every token must sit inside the sRGB gamut
+(Lightning CSS silently clips out-of-gamut values to hex at build time), clear
+WCAG AA against the backgrounds it actually lands on, and stay in sync with the
+two places `--color-page` has to be mirrored as a literal (`app/icon.svg` and
+the `themeColor` in `app/layout.tsx`).
 
 ## Pages
 

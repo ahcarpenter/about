@@ -33,7 +33,7 @@ export default function StoryPage() {
                 {/* Dot on the line, marking the date + event header */}
                 <span
                   aria-hidden
-                  className="tl-dot absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-[3px] border-accent bg-cream sm:h-[19px] sm:w-[19px]"
+                  className="tl-dot absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-[3px] border-accent bg-page sm:h-[19px] sm:w-[19px]"
                 />
                 <div className="tl-head pl-9 sm:pl-12">
                   <p className="font-mono text-xs uppercase tracking-[0.18em] text-accent">

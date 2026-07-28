@@ -1,37 +1,58 @@
 @import "tailwindcss";
 
 /*
-  Light-only theme inspired by conductor.build:
-  warm cream paper, high-contrast serif display type,
-  terracotta accent, thin warm borders, soft rounded cards.
+  Light-only theme: warm-neutral paper (E2E1DC and its own hue), pure-black
+  ink, electric-blue accent for links, plum for primary buttons, magenta for
+  their hover state and for solid dots.
+
+  `static` so tokens referenced only from JS are never tree-shaken out.
 */
 
-@theme {
-  --color-cream: oklch(0.975 0.013 82.402);
-  --color-paper: oklch(0.954 0.02 84.59);
-  --color-surface: oklch(0.994 0.008 91.48);
-  --color-ink: oklch(0.233 0.016 84.478);
-  --color-soft: oklch(0.433 0.028 88.288);
-  --color-muted: oklch(0.495 0.032 86.638);
-  --color-faint: oklch(0.6 0.033 88.408);
-  --color-line: oklch(0.906 0.027 85.667);
-  --color-line-strong: oklch(0.851 0.039 86.893);
-  /* L capped at 0.56 so accent text clears 4.5:1 AA on cream (was 4.16:1). */
-  --color-accent: oklch(0.56 0.155 37.306);
-  --color-accent-deep: oklch(0.504 0.144 37.069);
-  --color-accent-soft: oklch(0.927 0.029 60.755);
-  --color-gold: oklch(0.663 0.119 80.097);
-  --color-sage: oklch(0.531 0.051 135.352);
-  /* LinkedIn brand blue — a third-party brand color, kept in sRGB hex (like the
-     language brand colors in lib/language-colors.ts) rather than an OKLCH token. */
-  --color-linkedin: #4a6c8c;
+@theme static {
+  /* Neutrals — all on the page background's own hue (97.36), so every tint
+     and shade of the page reads as the same paper, never warm/cool drift. */
+  --color-surface: oklch(0.985 0.004 97.36); /* #fbfaf7  raised: cards, inputs */
+  /* The page. Mirrored in app/icon.svg and app/layout.tsx `themeColor` —
+     app/theme.test.ts asserts all three stay equal to #E2E1DC. */
+  --color-page: oklch(0.9091 0.0068 97.36); /* #e2e1dc */
+  --color-paper: oklch(0.868 0.009 97.36); /* #d5d4cd  recessed: footer, chat header */
+  --color-line: oklch(0.828 0.011 97.36); /* #c8c7bf */
+  --color-line-strong: oklch(0.762 0.013 97.36); /* #b4b2a9 */
+  /* L 0.545, not 0.6: keeps the de-emphasised captions on cards at 4.76:1. */
+  --color-faint: oklch(0.545 0.014 97.36); /* #727067 */
+  /* L 0.47, not 0.495: 0.495 is only 4.32:1 on the footer's paper/60 bed. */
+  --color-muted: oklch(0.47 0.014 97.36); /* #5d5b52  4.81:1 in footer */
+  --color-soft: oklch(0.4 0.013 97.36); /* #494840  7.02:1 on page */
+  --color-ink: oklch(0 0 0); /* #000000  16.04:1 on page */
+
+  /* Accent = links and emphasis text. Blue because it is the only chromatic
+     in the palette that clears 4.5:1 as text on the page (6.85:1). */
+  --color-accent: oklch(0.435 0.2801 264.21); /* #001ee7  6.85 page / 8.60 surface */
+  /* C capped at 0.2536 = the sRGB gamut edge at this L; 0.255 renders
+     out-of-gamut on P3 and would not match --color-accent's sRGB anchor. */
+  --color-accent-deep: oklch(0.365 0.2536 264.21); /* #0100c0  9.08 page; white on it 11.90 */
+  /* L 0.89, not 0.925: blue's max chroma at 0.925 is only 0.0355, too pale to
+     separate the borderless active nav pill from the page. */
+  --color-accent-soft: oklch(0.89 0.05 264.21); /* #cadbfd  accent-deep on it 8.55:1 */
+
+  /* Mark = solid shapes only — the .btn-mark CTA, source dots, status.
+     Never carries small text in white: white-on-mark is 3.28:1, so labels on
+     --color-mark are ink. */
+  --color-mark: oklch(0.6699 0.185 334.13); /* #d662c3  ink on it 6.39:1 */
+
+  /* Deep = primary-button fill, and the darkest chromatic in the palette. */
+  --color-deep: oklch(0.3253 0.0583 319.17); /* #412a47  surface on it 12.22:1 */
 
   --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", monospace;
 
-  --shadow-card: 0 1px 2px oklch(0.233 0.016 84.478 / 0.04), 0 6px 24px -12px oklch(0.233 0.016 84.478 / 0.16);
-  --shadow-lift: 0 2px 4px oklch(0.233 0.016 84.478 / 0.06), 0 16px 40px -16px oklch(0.233 0.016 84.478 / 0.24);
+  --shadow-card:
+    0 1px 2px color-mix(in oklab, var(--color-ink) 4%, transparent),
+    0 6px 24px -12px color-mix(in oklab, var(--color-ink) 16%, transparent);
+  --shadow-lift:
+    0 2px 4px color-mix(in oklab, var(--color-ink) 6%, transparent),
+    0 16px 40px -16px color-mix(in oklab, var(--color-ink) 24%, transparent);
 }
 
 @layer base {
@@ -41,7 +62,7 @@
   }
 
   body {
-    background-color: var(--color-cream);
+    background-color: var(--color-page);
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -58,6 +79,20 @@
   ::selection {
     background: var(--color-accent-soft);
     color: var(--color-accent-deep);
+  }
+
+  /* One focus ring for the whole site. Offset so it lands on the surface
+     behind the control rather than on a plum/magenta fill, where an accent
+     ring would only reach 2.7:1. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Feed rows span the full width of their card, which clips overflow — a
+     positive offset would be shaved to ~1px. Draw this one inward instead. */
+  ul.card a:focus-visible {
+    outline-offset: -2px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -122,42 +157,76 @@
     transform: translateY(-2px);
   }
 
-  /* Buttons */
+  /*
+    Buttons, in the pushable style posthog.com uses: a solid darker edge sits
+    under the face, the face travels on hover/press, and the bottom of the
+    assembly stays put so nothing reflows. PostHog builds this from two nested
+    elements; a hard `box-shadow` renders identically from one, which keeps
+    <a> and <button> markup untouched.
+
+    Hover is the travel only — no color change — so a variant reads as one
+    color throughout. Each variant sets just its face and --btn-edge, and the
+    edge is mixed down from the face so it follows the token rather than being
+    a second hand-tuned literal that can drift.
+  */
   .btn {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    border-radius: 999px;
-    padding: 0.625rem 1.25rem;
+    border: 1.5px solid var(--btn-edge);
+    border-radius: 8px;
+    padding: 0.5rem 1.15rem;
     font-size: 0.9rem;
     font-weight: 600;
-    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease,
-      transform 150ms ease, box-shadow 150ms ease;
+    box-shadow: 0 2px 0 var(--btn-edge);
+    transition: transform 100ms ease, box-shadow 100ms ease,
+      background-color 150ms ease, color 150ms ease, border-color 150ms ease;
   }
 
-  .btn:active {
-    transform: translateY(1px) scale(0.96);
+  /* Faces run 35-41px tall, under the 44px touch target. Extend with a
+     pseudo-element rather than padding so the PostHog proportions hold. A
+     fixed 44px band rather than a relative inset, so every size lands on 44
+     exactly. Vertical only: buttons sit side by side, so growing x collides. */
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 44px;
+    transform: translateY(-50%);
+  }
+
+  /* Rises 1px while the edge grows 1px — bottom edge holds still. */
+  .btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 var(--btn-edge);
+  }
+
+  .btn:active:not(:disabled) {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 var(--btn-edge);
   }
 
   .btn-primary {
-    background: var(--color-accent);
+    --btn-edge: color-mix(in oklab, var(--color-deep) 74%, black);
+    background: var(--color-deep);
     color: var(--color-surface);
-    box-shadow: 0 1px 2px oklch(0.504 0.144 37.069 / 0.35), inset 0 1px 0 oklch(1 0 0 / 0.18);
   }
 
-  .btn-primary:hover {
-    background: var(--color-accent-deep);
+  /* The magenta CTA. Its label is ink, not surface: white on --color-mark is
+     only 3.28:1, ink on it is 6.39:1. */
+  .btn-mark {
+    --btn-edge: color-mix(in oklab, var(--color-mark) 74%, black);
+    background: var(--color-mark);
+    color: var(--color-ink);
   }
 
   .btn-secondary {
-    background: transparent;
-    color: var(--color-ink);
-    border: 1px solid var(--color-line-strong);
-  }
-
-  .btn-secondary:hover {
+    --btn-edge: var(--color-line-strong);
     background: var(--color-surface);
-    border-color: var(--color-faint);
+    color: var(--color-ink);
   }
 
   /* Source chips in the activity feed */
@@ -172,7 +241,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     border: 1px solid var(--color-line);
-    background: var(--color-cream);
+    background: var(--color-page);
     color: var(--color-muted);
   }
 
@@ -263,8 +332,10 @@
     margin-left: auto;
   }
 
+  /* Page, not surface: this bubble sits inside a .card, which is already
+     surface — a surface fill would leave it invisible but for its border. */
   .msg-bot {
-    background: var(--color-surface);
+    background: var(--color-page);
     border: 1px solid var(--color-line);
     border-bottom-left-radius: 0.3rem;
   }
