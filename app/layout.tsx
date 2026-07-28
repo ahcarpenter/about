@@ -44,7 +44,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: "light",
-  themeColor: "#fbf6ed",
+  /* Mirrors --color-page in app/globals.css; app/theme.test.ts keeps them equal. */
+  themeColor: "#e2e1dc",
 };
 
 export default function RootLayout({

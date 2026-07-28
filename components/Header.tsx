@@ -18,7 +18,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-cream/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-line bg-page/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3.5">
         <Link
           href="/"
@@ -33,7 +33,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className={`relative rounded-full px-3 py-1.5 text-sm font-medium transition-colors before:absolute before:inset-x-0 before:-inset-y-1 before:content-[''] ${
+              className={`relative rounded-full px-3 py-1.5 text-sm font-medium transition-[color,background-color,scale] before:absolute before:inset-x-0 before:-inset-y-1.5 before:content-[''] active:scale-[0.96] ${
                 isActive(l.href)
                   ? "bg-accent-soft text-accent-deep"
                   : "text-soft hover:bg-surface hover:text-ink"
@@ -45,7 +45,7 @@ export default function Header() {
           {cta && (
             <Link
               href={cta.href}
-              className="btn btn-primary relative ml-1 px-4 py-1.5 text-sm before:absolute before:inset-x-0 before:-inset-y-1 before:content-['']"
+              className="btn btn-mark relative ml-1 px-4 py-1.5 text-sm before:absolute before:inset-x-0 before:-inset-y-1 before:content-['']"
             >
               <span className="sm:hidden">{cta.label}</span>
               <span className="hidden sm:inline">{cta.label} with me</span>
