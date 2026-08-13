@@ -49,7 +49,7 @@ export default function ChatStub() {
     <div className="card flex h-[32rem] flex-col overflow-hidden">
       <div className="flex items-center gap-3 border-b border-line bg-paper/50 px-5 py-3">
         <span className="relative flex h-2.5 w-2.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mark opacity-60" />
+          <span className="pulse-halo absolute inline-flex h-full w-full rounded-full bg-mark" />
           <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-mark" />
         </span>
         <p className="font-mono text-xs uppercase tracking-wide text-muted">

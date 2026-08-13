@@ -25,7 +25,6 @@ export default async function Home() {
       <section className="mx-auto max-w-5xl px-5 pt-6" id="activity">
         <Reveal>
           <SectionHeader
-            kicker="The feed"
             title={
               <>
                 What I’ve been <em>up to</em>
@@ -41,10 +40,9 @@ export default async function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-5xl px-5 pt-20" id="projects">
+      <section className="mx-auto max-w-5xl px-5 pt-24" id="projects">
         <Reveal>
           <SectionHeader
-            kicker="Projects"
             title={
               <>
                 Things I’ve <em>built</em>

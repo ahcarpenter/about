@@ -20,3 +20,7 @@ next-env.d.ts
 
 # local agent config (may hold secrets)
 .claude/settings.local.json
+
+# impeccable (machine-local: hook consent + per-session finding cache)
+.impeccable/config.local.json
+.impeccable/hook.cache.json

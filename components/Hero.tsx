@@ -7,8 +7,7 @@ export default function Hero() {
   return (
     <section className="mx-auto grid max-w-5xl items-center gap-10 px-5 pb-16 pt-14 sm:pt-20 md:grid-cols-[1.2fr_0.8fr]">
       <div>
-        <p className="kicker">Hello, I’m</p>
-        <h1 className="display mt-3 text-5xl sm:text-6xl md:text-7xl">
+        <h1 className="display text-5xl sm:text-6xl md:text-7xl">
           Andrew <em>Carpenter</em>
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-soft">
@@ -43,7 +42,7 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto w-56 sm:w-64 md:w-full md:max-w-[280px]">
-        <div aria-hidden className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border border-line-strong bg-paper" />
+        <div aria-hidden className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl border border-line-strong bg-paper" />
         <div className="card relative overflow-hidden rounded-2xl p-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -54,7 +53,7 @@ export default function Hero() {
             fetchPriority="high"
             className="aspect-square w-full rounded-lg bg-paper object-cover outline -outline-offset-1 outline-black/10"
           />
-          <p className="px-2 pb-1 pt-2 text-center font-mono text-[0.65rem] uppercase tracking-widest text-faint">
+          <p className="px-2 pb-1 pt-2 text-center font-mono text-xs uppercase tracking-widest text-faint">
             Est. somewhere — still shipping
           </p>
         </div>

@@ -8,10 +8,9 @@ import { formatDate } from "@/lib/format";
 
 export default function WritingSection({ posts }: { posts: SubstackPost[] }) {
   return (
-    <section className="mx-auto max-w-5xl px-5 pt-20" id="writing">
+    <section className="mx-auto max-w-5xl px-5 pt-24" id="writing">
       <Reveal>
         <SectionHeader
-          kicker="Writing"
           title={
             <>
               From the <em>Substack</em>

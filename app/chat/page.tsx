@@ -11,8 +11,7 @@ export const metadata: Metadata = {
 export default function ChatPage() {
   return (
     <div className="mx-auto max-w-2xl px-5 pb-8 pt-14 sm:pt-20">
-      <p className="kicker">Chat</p>
-      <h1 className="display mt-3 text-4xl sm:text-6xl">
+      <h1 className="display text-4xl sm:text-6xl">
         Talk to <em>AI me</em>
       </h1>
       <p className="mt-6 max-w-xl text-lg leading-relaxed text-soft">

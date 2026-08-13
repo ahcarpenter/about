@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="kicker">Pages</p>
+          <p className="label">Pages</p>
           <ul className="mt-1">
             {navLinks.map((p) => (
               <li key={p.href}>
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="kicker">Elsewhere</p>
+          <p className="label">Elsewhere</p>
           <ul className="mt-1">
             {socialLinks.map((e) => (
               <li key={e.href}>
