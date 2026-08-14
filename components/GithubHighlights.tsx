@@ -46,8 +46,16 @@ export default function GithubHighlights({ repos }: { repos: Repo[] }) {
                 {repo.language}
               </span>
             )}
-            {repo.stargazers_count > 0 && <span>★ {repo.stargazers_count}</span>}
-            {repo.forks_count > 0 && <span>⑂ {repo.forks_count}</span>}
+            {repo.stargazers_count > 0 && (
+              <span aria-label={`${repo.stargazers_count} star${repo.stargazers_count === 1 ? "" : "s"}`}>
+                <span aria-hidden>★</span> {repo.stargazers_count}
+              </span>
+            )}
+            {repo.forks_count > 0 && (
+              <span aria-label={`${repo.forks_count} fork${repo.forks_count === 1 ? "" : "s"}`}>
+                <span aria-hidden>⑂</span> {repo.forks_count}
+              </span>
+            )}
           </div>
         </ExternalLink>
       ))}

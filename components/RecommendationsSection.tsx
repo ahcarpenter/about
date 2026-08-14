@@ -7,10 +7,9 @@ import { site } from "@/lib/site";
 
 export default function RecommendationsSection() {
   return (
-    <section className="mx-auto max-w-5xl px-5 pt-20" id="kind-words">
+    <section className="mx-auto max-w-5xl px-5 pt-24" id="kind-words">
       <Reveal>
         <SectionHeader
-          kicker="Kind words"
           title={
             <>
               What colleagues <em>say</em>
@@ -20,12 +19,15 @@ export default function RecommendationsSection() {
         />
       </Reveal>
 
-      <div className="mt-8 gap-4 sm:columns-2 lg:columns-3">
+      {/* Two columns, not three: at 64rem a third column drops each quote to
+          roughly 45 characters, and the recommendations vary enough in length
+          that a denser masonry rags badly. */}
+      <div className="mt-8 gap-5 sm:columns-2">
         {recommendations.map((rec, i) => (
           <Reveal
             key={rec.name}
             delay={Math.min(i, 3) * 80}
-            className="reveal mb-4 break-inside-avoid"
+            className="reveal mb-5 break-inside-avoid"
           >
             <RecommendationCard rec={rec} />
           </Reveal>

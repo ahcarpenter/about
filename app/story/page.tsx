@@ -10,16 +10,20 @@ export const metadata: Metadata = {
 export default function StoryPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 pb-8 pt-14 sm:pt-20">
-      <p className="kicker">Story</p>
-      <h1 className="display mt-3 text-4xl sm:text-6xl">
+      <h1 className="display text-4xl sm:text-6xl">
         The road <em>so far</em>
       </h1>
-      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-soft">
+      <p className="mt-6 max-w-xl text-lg leading-relaxed text-soft">
         A life in dots. Scroll — each one marks a chapter, and the details fade
         in as you reach them.
       </p>
 
-      <div className="relative mt-16">
+      {/* `overflow-x-clip`, because .tl-body rests at translateX(24px) until its
+          item reveals and its box already spans gutter to gutter — on a phone
+          that overhang gave the document a persistent 4px horizontal scroll for
+          every item still below the fold. Clip rather than hidden: no scroll
+          container, and the 24px it eats is only ever text still at opacity 0. */}
+      <div className="relative mt-16 overflow-x-clip">
         {/* The vertical line */}
         <div
           aria-hidden

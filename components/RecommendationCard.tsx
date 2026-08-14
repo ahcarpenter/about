@@ -6,10 +6,10 @@ export default function RecommendationCard({ rec }: { rec: Recommendation }) {
   const avatar = rec.profileUrl ? recommenderAvatars[rec.profileUrl] : undefined;
   const inner = (
     <>
-      <span aria-hidden className="display text-5xl leading-none text-accent">
-        “
-      </span>
-      <blockquote className="mt-1 whitespace-pre-line text-sm leading-relaxed text-soft">
+      {/* No decorative quote glyph: the card, the rule, and the attribution
+          already say "quotation", and a display-size mark in accent would
+          spend the palette's one reading color on ornament. */}
+      <blockquote className="whitespace-pre-line text-sm leading-relaxed text-soft">
         {rec.quote}
       </blockquote>
       <figcaption className="mt-5 flex items-center gap-3 border-t border-line pt-4">
@@ -33,7 +33,12 @@ export default function RecommendationCard({ rec }: { rec: Recommendation }) {
                 ↗
               </span>
             )}
-            {rec.sample && <span className="chip font-normal">sample</span>}
+            {rec.sample && (
+              <span className="chip font-normal" title="Placeholder — not yet confirmed as real">
+                sample
+                <span className="sr-only"> (placeholder, not yet confirmed as real)</span>
+              </span>
+            )}
           </span>
           <span className="mt-0.5 block text-xs text-muted">
             {rec.title}

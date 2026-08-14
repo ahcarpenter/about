@@ -16,7 +16,7 @@ describe("ActivityFeed", () => {
   it("shows the empty state when a filter matches nothing", () => {
     render(<ActivityFeed githubActivity={[]} substackPosts={[]} />);
     fireEvent.click(screen.getByRole("button", { name: "GitHub" }));
-    expect(screen.getByText("Nothing here yet.")).toBeTruthy();
+    expect(screen.getByText("Nothing under GitHub yet.")).toBeTruthy();
   });
 
   it("includes passed-in GitHub activity", () => {

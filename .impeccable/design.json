@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-14T00:21:45.000Z",
+  "title": "Design System: Andrew H. Carpenter",
+  "extensions": {
+    "colorMeta": {
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "oklch(0.985 0.004 97.36)",
+        "tonalRamp": [
+          "oklch(0 0 0)",
+          "oklch(0.4 0.013 97.36)",
+          "oklch(0.47 0.014 97.36)",
+          "oklch(0.545 0.014 97.36)",
+          "oklch(0.762 0.013 97.36)",
+          "oklch(0.828 0.011 97.36)",
+          "oklch(0.868 0.009 97.36)",
+          "oklch(0.985 0.004 97.36)"
+        ]
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Page",
+        "canonical": "oklch(0.9091 0.0068 97.36)",
+        "tonalRamp": [
+          "oklch(0 0 0)",
+          "oklch(0.4 0.013 97.36)",
+          "oklch(0.47 0.014 97.36)",
+          "oklch(0.545 0.014 97.36)",
+          "oklch(0.762 0.013 97.36)",
+          "oklch(0.828 0.011 97.36)",
+          "oklch(0.868 0.009 97.36)",
+          "oklch(0.985 0.004 97.36)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(0.868 0.009 97.36)"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "oklch(0.828 0.011 97.36)"
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Rule Strong",
+        "canonical": "oklch(0.762 0.013 97.36)"
+      },
+      "faint": {
+        "role": "neutral",
+        "displayName": "Faint",
+        "canonical": "oklch(0.545 0.014 97.36)"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "oklch(0.47 0.014 97.36)"
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Soft",
+        "canonical": "oklch(0.4 0.013 97.36)"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(0 0 0)"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Electric Ink",
+        "canonical": "oklch(0.435 0.2801 264.21)",
+        "tonalRamp": [
+          "oklch(0.15 0.13 264.21)",
+          "oklch(0.25 0.19 264.21)",
+          "oklch(0.365 0.2536 264.21)",
+          "oklch(0.435 0.2801 264.21)",
+          "oklch(0.55 0.22 264.21)",
+          "oklch(0.7 0.15 264.21)",
+          "oklch(0.82 0.09 264.21)",
+          "oklch(0.89 0.05 264.21)"
+        ]
+      },
+      "accent-deep": {
+        "role": "primary",
+        "displayName": "Electric Ink Deep",
+        "canonical": "oklch(0.365 0.2536 264.21)"
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Electric Ink Soft",
+        "canonical": "oklch(0.89 0.05 264.21)"
+      },
+      "deep": {
+        "role": "secondary",
+        "displayName": "Plum Black",
+        "canonical": "oklch(0.3253 0.0583 319.17)",
+        "tonalRamp": [
+          "oklch(0.15 0.035 319.17)",
+          "oklch(0.22 0.045 319.17)",
+          "oklch(0.3253 0.0583 319.17)",
+          "oklch(0.45 0.07 319.17)",
+          "oklch(0.58 0.075 319.17)",
+          "oklch(0.7 0.06 319.17)",
+          "oklch(0.83 0.035 319.17)",
+          "oklch(0.94 0.015 319.17)"
+        ]
+      },
+      "mark": {
+        "role": "tertiary",
+        "displayName": "Signal Magenta",
+        "canonical": "oklch(0.6699 0.185 334.13)",
+        "tonalRamp": [
+          "oklch(0.2 0.09 334.13)",
+          "oklch(0.3 0.13 334.13)",
+          "oklch(0.4 0.16 334.13)",
+          "oklch(0.5 0.19 334.13)",
+          "oklch(0.6699 0.185 334.13)",
+          "oklch(0.78 0.13 334.13)",
+          "oklch(0.88 0.075 334.13)",
+          "oklch(0.95 0.03 334.13)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page-owning headlines only — the hero name and each page's h1. Always text-wrap: balance, always with one italic Electric Ink run inside."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings on the home page. They stand alone — there is no eyebrow label above them."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Principle names, timeline event titles, card headings."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "The single Soft paragraph under each h1, capped near 36rem."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All prose, in Soft. text-wrap: pretty globally so no paragraph ends on an orphan."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "The mono uppercase Muted heading over a column of links (the footer's Pages and Elsewhere). Names a group of items; never an eyebrow over a heading."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Anything the site measured, fetched, or stamped: dates, counts, source names, the Keybase verification line."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Button labels only. The one place weight goes above 500 in the sans."
+      },
+      "message": {
+        "displayName": "Message",
+        "purpose": "Chat bubble text — a half-step under body because a bubble is a shorter measure than a paragraph."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-ambient",
+        "value": "0 1px 2px color-mix(in oklab, var(--color-ink) 4%, transparent), 0 6px 24px -12px color-mix(in oklab, var(--color-ink) 16%, transparent)",
+        "purpose": "Every card at rest. Deliberately near-invisible; separates Surface from Page without announcing itself."
+      },
+      {
+        "name": "card-lift",
+        "value": "0 1px 3px color-mix(in oklab, var(--color-ink) 5%, transparent), 0 10px 28px -14px color-mix(in oklab, var(--color-ink) 18%, transparent)",
+        "purpose": "Interactive cards on hover, paired with translateY(-1px) and a border shift to Rule Strong. Never on a static card."
+      },
+      {
+        "name": "control-edge-rest",
+        "value": "0 1px 0 var(--btn-edge)",
+        "purpose": "The hairline band under every button. --btn-edge is always color-mix(in oklab, <face token> 74%, black)."
+      },
+      {
+        "name": "control-edge-hover",
+        "value": "0 2px 0 var(--btn-edge)",
+        "purpose": "Grows 1px as the face rises 1px, so the bottom of the assembly holds still."
+      },
+      {
+        "name": "control-edge-press",
+        "value": "0 0 0 var(--btn-edge)",
+        "purpose": "Gone — the face has travelled down onto its own edge and is fully seated."
+      },
+      {
+        "name": "image-outline",
+        "value": "outline: 1px solid rgb(0 0 0 / 0.1); outline-offset: -1px",
+        "purpose": "Inset outline on photographs so a light image still has a defined edge without the frame growing."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-entry",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Every arrival: scroll reveals (650ms), timeline head/body slides (550/700ms), chat bubble rise (300ms)."
+      },
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "The timeline dot settles from scale(0.72) over 460ms. Exponential ease-out, no overshoot — the stagger is the gesture, not a bounce."
+      },
+      {
+        "name": "duration-press",
+        "value": "100ms ease",
+        "purpose": "Button transform and edge. Fast enough to feel mechanical rather than animated."
+      },
+      {
+        "name": "duration-state",
+        "value": "150ms ease",
+        "purpose": "Color, background, and border transitions on controls."
+      },
+      {
+        "name": "duration-surface",
+        "value": "200ms ease",
+        "purpose": "Card shadow, transform, and border-color on hover."
+      },
+      {
+        "name": "stagger-timeline",
+        "value": "0ms dot / 120ms head / 240ms body",
+        "purpose": "The sequence that makes a timeline entry read as a life laid down in order."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce) { opacity: 1 !important; transform: none !important; transition: none !important; }",
+        "purpose": "Every reveal, timeline part, and chat animation is neutralized. Any new animation joins this block in the same commit."
+      },
+      {
+        "name": "pulse-halo",
+        "value": "2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite, scale 1 to 1.9, opacity 0.45 to 0",
+        "purpose": "The live status dot's halo. Replaces Tailwind's animate-ping, which doubles the dot in 1s and reads as an alarm."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The default forward action. Plum Black face over a hairline edge in its own color; hover and press are travel only, never a color change.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Read my story</a>",
+      "css": ".ds-btn { position: relative; display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid var(--btn-edge); border-radius: 8px; padding: 0.5rem 1.15rem; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.9rem; font-weight: 600; text-decoration: none; box-shadow: 0 1px 0 var(--btn-edge); transition: transform 100ms ease, box-shadow 100ms ease, background-color 150ms ease, color 150ms ease, border-color 150ms ease; } .ds-btn::after { content: \"\"; position: absolute; top: 50%; right: 0; left: 0; height: 44px; transform: translateY(-50%); } .ds-btn:hover { transform: translateY(-1px); box-shadow: 0 2px 0 var(--btn-edge); } .ds-btn:active { transform: translateY(1px); box-shadow: 0 0 0 var(--btn-edge); } .ds-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-btn-primary { --btn-edge: color-mix(in oklab, var(--color-deep) 74%, black); background: var(--color-deep); color: var(--color-surface); }"
+    },
+    {
+      "name": "Mark Button (chat CTA)",
+      "kind": "button",
+      "refersTo": "button-mark",
+      "description": "Reserved for the invitation to talk — the header CTA and nothing routine. Its label is Ink, never white: white on Signal Magenta is 3.28:1.",
+      "html": "<a class=\"ds-btn ds-btn-mark\" href=\"#\">Chat with me</a>",
+      "css": ".ds-btn { position: relative; display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid var(--btn-edge); border-radius: 8px; padding: 0.5rem 1.15rem; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.9rem; font-weight: 600; text-decoration: none; box-shadow: 0 1px 0 var(--btn-edge); transition: transform 100ms ease, box-shadow 100ms ease, background-color 150ms ease, color 150ms ease, border-color 150ms ease; } .ds-btn::after { content: \"\"; position: absolute; top: 50%; right: 0; left: 0; height: 44px; transform: translateY(-50%); } .ds-btn:hover { transform: translateY(-1px); box-shadow: 0 2px 0 var(--btn-edge); } .ds-btn:active { transform: translateY(1px); box-shadow: 0 0 0 var(--btn-edge); } .ds-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-btn-mark { --btn-edge: color-mix(in oklab, var(--color-mark) 74%, black); background: var(--color-mark); color: var(--color-ink); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Sits beside primary without competing. Surface face, Ink label, Rule Strong edge.",
+      "html": "<a class=\"ds-btn ds-btn-secondary\" href=\"#\">What I believe</a>",
+      "css": ".ds-btn { position: relative; display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid var(--btn-edge); border-radius: 8px; padding: 0.5rem 1.15rem; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.9rem; font-weight: 600; text-decoration: none; box-shadow: 0 1px 0 var(--btn-edge); transition: transform 100ms ease, box-shadow 100ms ease, background-color 150ms ease, color 150ms ease, border-color 150ms ease; } .ds-btn::after { content: \"\"; position: absolute; top: 50%; right: 0; left: 0; height: 44px; transform: translateY(-50%); } .ds-btn:hover { transform: translateY(-1px); box-shadow: 0 2px 0 var(--btn-edge); } .ds-btn:active { transform: translateY(1px); box-shadow: 0 0 0 var(--btn-edge); } .ds-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-btn-secondary { --btn-edge: var(--color-line-strong); background: var(--color-surface); color: var(--color-ink); }"
+    },
+    {
+      "name": "Section Header",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "A Fraunces heading with exactly one italic Electric Ink run, and nothing above it. No eyebrow, no category slug, no number — the heading carries its own section.",
+      "html": "<div class=\"ds-section-header\"><h2 class=\"ds-display\">How I try to <em>think</em></h2></div>",
+      "css": ".ds-display { font-family: var(--font-display, Georgia, serif); font-weight: 560; letter-spacing: -0.015em; line-height: 1.08; text-wrap: balance; font-variation-settings: \"SOFT\" 40, \"WONK\" 1; font-size: 2.25rem; color: var(--color-ink); margin: 0; } .ds-display em { font-style: italic; font-weight: 500; color: var(--color-accent); }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Surface on Page, 1rem radius, hairline Rule border, near-invisible ambient shadow. Lifts 1px on hover only when it is actually interactive.",
+      "html": "<a class=\"ds-card\" href=\"#\"><h3 class=\"ds-card-title\">about</h3><p class=\"ds-card-body\">Personal site — Next.js static export, Tailwind v4, deployed to GitHub Pages.</p><div class=\"ds-card-meta\"><span>TypeScript</span><span>12 commits</span></div></a>",
+      "css": ".ds-card { display: block; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 1rem; padding: 1.25rem; text-decoration: none; box-shadow: 0 1px 2px color-mix(in oklab, var(--color-ink) 4%, transparent), 0 6px 24px -12px color-mix(in oklab, var(--color-ink) 16%, transparent); transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease; } .ds-card:hover { box-shadow: 0 1px 3px color-mix(in oklab, var(--color-ink) 5%, transparent), 0 10px 28px -14px color-mix(in oklab, var(--color-ink) 18%, transparent); border-color: var(--color-line-strong); transform: translateY(-1px); } .ds-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-card-title { font-family: var(--font-mono, ui-monospace, monospace); font-size: 0.875rem; font-weight: 500; color: var(--color-ink); margin: 0; transition: color 200ms ease; } .ds-card:hover .ds-card-title { color: var(--color-accent); } .ds-card-body { font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.875rem; line-height: 1.625; color: var(--color-muted); margin: 0.5rem 0 0; } .ds-card-meta { display: flex; gap: 1rem; margin-top: 1rem; font-family: var(--font-mono, ui-monospace, monospace); font-size: 0.75rem; color: var(--color-muted); }"
+    },
+    {
+      "name": "Source Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Full-pill mono tag. Its primary job is the `sample` badge on placeholder content — a truth mechanism, not decoration.",
+      "html": "<span class=\"ds-chip\">sample</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; gap: 0.35rem; border-radius: 999px; padding: 0.15rem 0.6rem; font-family: var(--font-mono, ui-monospace, monospace); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--color-line); background: var(--color-page); color: var(--color-muted); }"
+    },
+    {
+      "name": "Nav Pill",
+      "kind": "nav",
+      "refersTo": "nav-pill",
+      "description": "Header navigation. Inactive is Soft on transparent; active is Electric Ink Deep on Electric Ink Soft, borderless — the fill alone carries state. The 44px hit area comes from a negative-inset pseudo-element, not padding.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-pill ds-nav-pill-active\" href=\"#\">Philosophy</a><a class=\"ds-nav-pill\" href=\"#\">Story</a><a class=\"ds-nav-pill\" href=\"#\">Chat</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 0.5rem; } .ds-nav-pill { position: relative; border-radius: 999px; padding: 0.375rem 0.75rem; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.875rem; font-weight: 500; text-decoration: none; color: var(--color-soft); transition: color 150ms ease, background-color 150ms ease, scale 150ms ease; } .ds-nav-pill::before { content: \"\"; position: absolute; left: 0; right: 0; top: -0.375rem; bottom: -0.375rem; } .ds-nav-pill:hover { background: var(--color-surface); color: var(--color-ink); } .ds-nav-pill:active { scale: 0.96; } .ds-nav-pill:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-nav-pill-active, .ds-nav-pill-active:hover { background: var(--color-accent-soft); color: var(--color-accent-deep); }"
+    },
+    {
+      "name": "Chat Input",
+      "kind": "input",
+      "refersTo": "input-chat",
+      "description": "Full pill on a Page fill — not Surface, because it sits inside a card that is already Surface and would otherwise be invisible but for its border. Focus shifts the border to Electric Ink.",
+      "html": "<input class=\"ds-input-chat\" type=\"text\" placeholder=\"Ask me anything…\" />",
+      "css": ".ds-input-chat { width: 100%; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-page); padding: 0.625rem 1rem; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 1rem; color: var(--color-ink); transition: border-color 150ms ease; } .ds-input-chat::placeholder { color: var(--color-muted); } .ds-input-chat:focus { border-color: var(--color-accent); } .ds-input-chat:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } @media (min-width: 640px) { .ds-input-chat { font-size: 0.875rem; } }"
+    },
+    {
+      "name": "Chat Bubbles",
+      "kind": "custom",
+      "refersTo": "msg-me",
+      "description": "Mine: Electric Ink fill, Surface text, right-aligned. Bot: Page fill with a hairline border, left-aligned. Each has a 0.3rem tail corner nearest its speaker, so no drawn arrow is needed.",
+      "html": "<div class=\"ds-chat\"><div class=\"ds-msg ds-msg-bot\">Hey — I'm a stub for now, but ask away.</div><div class=\"ds-msg ds-msg-me\">What do you actually believe about building software?</div><div class=\"ds-msg ds-msg-bot ds-typing\"><span class=\"ds-typing-dot\"></span><span class=\"ds-typing-dot\"></span><span class=\"ds-typing-dot\"></span></div></div>",
+      "css": ".ds-chat { display: flex; flex-direction: column; gap: 0.75rem; } .ds-msg { max-width: 85%; border-radius: 1.1rem; padding: 0.65rem 1rem; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.925rem; line-height: 1.55; } .ds-msg-me { background: var(--color-accent); color: var(--color-surface); border-bottom-right-radius: 0.3rem; margin-left: auto; } .ds-msg-bot { background: var(--color-page); color: var(--color-ink); border: 1px solid var(--color-line); border-bottom-left-radius: 0.3rem; } .ds-typing { display: inline-flex; align-items: center; gap: 0.375rem; padding-top: 0.75rem; padding-bottom: 0.75rem; } .ds-typing-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--color-faint); animation: ds-typing 1.2s infinite ease-in-out; } .ds-typing-dot:nth-child(2) { animation-delay: 0.15s; } .ds-typing-dot:nth-child(3) { animation-delay: 0.3s; } @keyframes ds-typing { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-4px); opacity: 1; } } @media (prefers-reduced-motion: reduce) { .ds-typing-dot { animation: none; } }"
+    },
+    {
+      "name": "Timeline Item",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "A Rule Strong hairline with a Page-filled dot ringed 3px in Electric Ink. On entry the dot settles from scale(0.72) on an exponential ease-out, the mono date and title slide in from the left at 120ms, and the description slides in from the right at 240ms.",
+      "html": "<ol class=\"ds-timeline\"><li class=\"ds-tl-item\"><span class=\"ds-tl-dot\"></span><div class=\"ds-tl-head\"><p class=\"ds-tl-date\">Today</p><h3 class=\"ds-tl-title\">Still building</h3></div><p class=\"ds-tl-body\">Writing, shipping side projects, and exploring what personal software looks like when an AI pair-programmer is always on call.</p></li></ol>",
+      "css": ".ds-timeline { position: relative; list-style: none; margin: 0; padding: 0; } .ds-timeline::before { content: \"\"; position: absolute; left: 9px; top: 0.5rem; bottom: 0; width: 1px; background: var(--color-line-strong); } .ds-tl-item { position: relative; } .ds-tl-dot { position: absolute; left: 0; top: 0.375rem; width: 19px; height: 19px; border-radius: 999px; border: 3px solid var(--color-accent); background: var(--color-page); } .ds-tl-head { padding-left: 3rem; } .ds-tl-date { font-family: var(--font-mono, ui-monospace, monospace); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-accent); margin: 0; } .ds-tl-title { font-family: var(--font-display, Georgia, serif); font-weight: 560; letter-spacing: -0.015em; line-height: 1.08; font-variation-settings: \"SOFT\" 40, \"WONK\" 1; font-size: 1.875rem; color: var(--color-ink); margin: 0.25rem 0 0; } .ds-tl-body { padding-left: 3rem; margin: 0.75rem 0 0; max-width: 36rem; font-family: var(--font-sans, Inter, system-ui, sans-serif); line-height: 1.625; color: var(--color-soft); }"
+    },
+    {
+      "name": "List Label",
+      "kind": "custom",
+      "refersTo": "chip",
+      "description": "The mono uppercase Muted heading over a column of links — the footer's Pages and Elsewhere. The only surviving mono label: it names a group of items and is never placed above a heading.",
+      "html": "<div><p class=\"ds-label\">Elsewhere</p><ul class=\"ds-label-list\"><li><a href=\"#\">GitHub ↗</a></li><li><a href=\"#\">Substack ↗</a></li></ul></div>",
+      "css": ".ds-label { font-family: var(--font-mono, ui-monospace, monospace); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-muted); margin: 0; } .ds-label-list { list-style: none; margin: 0.25rem 0 0; padding: 0; } .ds-label-list a { display: inline-block; padding: 0.625rem 0; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.875rem; color: var(--color-soft); text-decoration: none; transition: color 150ms ease; } .ds-label-list a:hover { color: var(--color-accent); } .ds-label-list a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }"
+    },
+    {
+      "name": "Recommendation Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A quotation, a hairline rule, then the attribution. Deliberately no quote glyph and no accent bar — the rule and the attribution already say “quotation”. Two masonry columns at sm and no more; a third drops the measure to roughly 45 characters.",
+      "html": "<a class=\"ds-rec\" href=\"#\"><blockquote class=\"ds-rec-quote\">Drew is a joy to work with, and uniquely gifted in his knowledge of software architecture. He has deep fluency in different design patterns and programming paradigms.</blockquote><figcaption class=\"ds-rec-by\"><span class=\"ds-rec-avatar\"></span><span><span class=\"ds-rec-name\">Christian Hughes <span class=\"ds-rec-arrow\">↗</span></span><span class=\"ds-rec-title\">Senior Software Engineer, Dropbox · Worked with Andrew on a different team</span></span></figcaption></a>",
+      "css": ".ds-rec { display: block; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 1rem; padding: 1.5rem; text-decoration: none; box-shadow: 0 1px 2px color-mix(in oklab, var(--color-ink) 4%, transparent), 0 6px 24px -12px color-mix(in oklab, var(--color-ink) 16%, transparent); transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease; } .ds-rec:hover { box-shadow: 0 1px 3px color-mix(in oklab, var(--color-ink) 5%, transparent), 0 10px 28px -14px color-mix(in oklab, var(--color-ink) 18%, transparent); border-color: var(--color-line-strong); transform: translateY(-1px); } .ds-rec:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-rec-quote { margin: 0; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.875rem; line-height: 1.625; color: var(--color-soft); } .ds-rec-by { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.25rem; border-top: 1px solid var(--color-line); padding-top: 1rem; } .ds-rec-avatar { width: 40px; height: 40px; flex-shrink: 0; border-radius: 999px; background: var(--color-paper); outline: 1px solid rgb(0 0 0 / 0.1); outline-offset: -1px; } .ds-rec-name { display: block; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.875rem; font-weight: 600; color: var(--color-ink); transition: color 200ms ease; } .ds-rec:hover .ds-rec-name { color: var(--color-accent); } .ds-rec-arrow { font-family: var(--font-mono, ui-monospace, monospace); font-size: 0.75rem; font-weight: 400; color: var(--color-faint); } .ds-rec-title { display: block; margin-top: 0.125rem; font-family: var(--font-sans, Inter, system-ui, sans-serif); font-size: 0.75rem; color: var(--color-muted); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Living Self-Portrait",
+    "overview": "The site is not a page about a person; it is the person, rendered. Three layers compose the portrait and every design decision serves one of them. **The likeness** — philosophy and story — is the drawn, deliberate part: serif, paper, slow. **The pulse** — GitHub, Substack, LinkedIn, reading — is the proof the subject is alive right now, fetched at build and never older than the last deploy. **The voice** — chat with AI me — is the standing offer to stop reading and just ask. A portrait that only had the likeness would be a résumé. One that only had the pulse would be a feed reader. The design's job is to hold all three in one frame without any of them looking pasted on.\n\nThat produces a specific material contradiction the system leans into rather than resolves: paper permanence *plus* visible liveness. The ground is a warm neutral paper stock (#E2E1DC) with a real grain overlay, set in a serif with optical-size and softness axes engaged — an artifact that looks like it was printed and will last. On top of it, things move: rows arrive from four live sources, timeline dots settle and descriptions slide in as you scroll, a magenta status dot breathes, typing indicators bounce. Nothing on the page may look like a snapshot.\n\n**The governing register is refined and restrained**, and it wins every tie. Nothing performs at rest. There are no eyebrow labels over headings, no section numbers, no decorative glyphs, no colored bars down the side of a card — a heading carries its own section, and a quotation is recognisable without a display-size quote mark. What remains is precise and engineered: mono for measured values, a contrast-tested palette, the arithmetic written into the CSS comments beside the tokens it justifies.\n\nRestraint is not coldness. The system keeps exactly enough personality to read as a person rather than a template — a wry portrait caption, italic blue in every headline, magenta held back for the one invitation to talk — and it keeps a real mechanical affordance in the controls, felt on contact rather than announced at rest. The craft is the argument, and the visitor is here to judge judgment.",
+    "keyCharacteristics": [
+      "One paper hue (97.36) carries every neutral, so no tint of the page ever drifts warm or cool against another.",
+      "Serif display with italic-blue emphasis; monospace for every label, slug, and measurement; sans for all prose.",
+      "Depth is physical rather than atmospheric — a hairline edge and a small offset, felt on contact, never a haze or a lifted slab.",
+      "Blue for reading, plum for acting, magenta for talking. Never mixed.",
+      "Motion is evidence of life, never decoration; all of it yields to `prefers-reduced-motion`.",
+      "Nothing labels, numbers, or decorates what a heading already says.",
+      "Light-mode only, and every token machine-tested for gamut and WCAG AA."
+    ],
+    "rules": [
+      {
+        "name": "The One Hue Rule",
+        "body": "Every neutral sits on hue 97.36 — the page background's own hue — so surface, paper, rule, muted, and soft all read as tints and shades of the same stock. A neutral introduced on any other hue breaks the paper.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Jobs Rule",
+        "body": "Blue reads, plum acts, magenta talks. Blue never fills a button. Plum never carries a link. Magenta never appears as text or in more than one element per viewport. Chromatics are never spent on ornament — a display-size quote glyph, a decorative bar, a colored divider — because the moment blue means \"decoration\" it stops meaning \"read this\". A visitor who learns the code once should never be retaught it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-on-Magenta Rule",
+        "body": "White on Signal Magenta is 3.28:1 and is banned. Ink on it is 6.39:1. Any label on a magenta fill is ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Test-Gated Palette Rule",
+        "body": "No color enters or changes without `app/theme.test.ts` passing: inside sRGB (Lightning CSS silently clips out-of-gamut values at build), clearing WCAG AA against the beds it actually lands on, and `--color-page` still equal across `globals.css`, `icon.svg`, and `themeColor`. The comments recording each contrast figure are part of the token, not decoration — a value that moves without its comment moving is a bug.",
+        "section": "colors"
+      },
+      {
+        "name": "The Italic Emphasis Rule",
+        "body": "Emphasis inside a display heading is Fraunces italic at weight 500 in Electric Ink — \"How I try to *think*\", \"Andrew *Carpenter*\". This is the site's signature typographic gesture. One per heading; never bold, never underlined, never a second color.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Means Machine Rule",
+        "body": "Monospace marks anything the site measured, fetched, or stamped: dates, counts, sources, slugs, hashes. Prose never takes mono for flavor, and a machine value never takes the sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "Nothing is labelled above a heading. No kicker, no eyebrow, no category slug, and no `01 / 02 / 03` sequence numbering unless the order itself is information the reader needs. If a heading needs a label to explain what section it starts, the heading is the thing to fix. Mono labels survive only where they head an actual list of items.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Faked Weight Rule",
+        "body": "`font-synthesis: none` is set globally. A missing weight or style must fail visibly rather than render browser-faked — if a heading looks wrong, the font did not load, and that is information.",
+        "section": "typography"
+      },
+      {
+        "name": "The Width-By-Purpose Rule",
+        "body": "Container width states what the page wants from you: 64rem to scan, 48rem to read, 42rem to talk. Do not standardize them.",
+        "section": "layout"
+      },
+      {
+        "name": "The Hidden 44 Rule",
+        "body": "Faces may be smaller than 44px; hit areas may not. Buttons extend with a fixed 44px `::after` band, pills and links with negative `before:-inset-y-*` insets. Vertical extension only — controls sit side by side, so growing horizontally collides.",
+        "section": "layout"
+      },
+      {
+        "name": "The Edge-From-Face Rule",
+        "body": "A button's edge is always `color-mix(in oklab, <its face token> 74%, black)`, never a hand-picked second literal. The edge follows the token so it cannot drift when the palette moves.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Still Bottom Rule",
+        "body": "Button travel is symmetric: the face moves and the edge compensates, so the bottom of the assembly holds still through hover and press. Layout never shifts on interaction.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Travel-Not-Tint Rule",
+        "body": "Hover on a button is movement only — no color change — so a variant reads as one color in every state. Color changes are reserved for links, pills, and text.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Hairline Depth Rule",
+        "body": "Depth is measured in single pixels. An edge, an offset, or a hover rise above 2px is a costume; if an element needs to read as higher than its neighbours, layer it tonally (Surface over Page over Paper) rather than lifting it further.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Radius-By-Role Rule",
+        "body": "8px means press me, 1rem means read inside me, 999px means pick me. A shape that takes the wrong radius lies about what it does.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Structural boundaries are 1px. Weight is earned by color (Rule → Rule Strong), never by adding pixels.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do run app/theme.test.ts before shipping any palette change. Every token must sit inside sRGB, clear WCAG AA on the beds it actually lands on, and keep --color-page identical across globals.css, icon.svg, and themeColor.",
+      "Do keep every neutral on hue 97.36. New neutrals are new lightness steps on the same hue, never a new hue.",
+      "Do give every display heading exactly one italic Electric Ink emphasis run, and let it stand alone — no label, eyebrow, or number above it.",
+      "Do derive a new button variant's edge as color-mix(in oklab, <face> 74%, black), keep it a hairline, and let hover be travel only.",
+      "Do extend hit areas to 44px vertically with a ::after band or negative before:-inset-y-* insets, never by inflating padding.",
+      "Do render the sample chip on any placeholder content, and remove the flag only when the content is genuinely real.",
+      "Do add every new animation to the prefers-reduced-motion block in globals.css in the same commit that introduces it.",
+      "Do use third-party brand colors (lib/source-brand.ts, lib/language-colors.ts) as sRGB hex outside the token system, and adjust lightness — never hue or chroma — when a mark needs 3:1 as the sole indicator."
+    ],
+    "donts": [
+      "Don't put white text on Signal Magenta (3.28:1). Labels on magenta are Ink.",
+      "Don't use Electric Ink as a fill behind small text, or plum on a link. Blue reads, plum acts, magenta talks.",
+      "Don't add a dark mode, a dark: variant, or a theme toggle. The site is color-scheme: light only by decision, and the contrast test only covers the light beds.",
+      "Don't introduce a second focus treatment. One ring, Electric Ink, 2px at 2px offset, flipping to -2px inside clipping cards.",
+      "Don't lift a card that isn't interactive. The hover shadow is a promise that something will happen when clicked.",
+      "Don't change a button's color on hover, or let its bottom edge move.",
+      "Don't put a label, eyebrow, category slug, or sequence number above a heading. If the heading needs explaining, rewrite the heading.",
+      "Don't spend a chromatic on ornament — no display-size quote glyphs, no colored side bars, no accent dividers. Blue that decorates stops meaning \"read this\".",
+      "Don't exceed 2px on an edge, offset, or hover rise. Deeper separation is tonal (Surface over Page over Paper), not taller.",
+      "Don't reach for gradients, glassmorphism, glow, floating 3D shapes, or logo walls. The confirmed anti-references are the SaaS landing page, the CV template, the dark-mode developer portfolio, and the corporate personal brand — this site must never be mistaken for any of the four.",
+      "Don't replace the grain overlay, the paper stock, or the offset portrait mount with a flat fill. The physical read is the identity.",
+      "Don't collapse the header into a hamburger, or standardize the three container widths into one."
+    ]
+  }
+}
