@@ -33,7 +33,12 @@ export default function RecommendationCard({ rec }: { rec: Recommendation }) {
                 ↗
               </span>
             )}
-            {rec.sample && <span className="chip font-normal">sample</span>}
+            {rec.sample && (
+              <span className="chip font-normal" title="Placeholder — not yet confirmed as real">
+                sample
+                <span className="sr-only"> (placeholder, not yet confirmed as real)</span>
+              </span>
+            )}
           </span>
           <span className="mt-0.5 block text-xs text-muted">
             {rec.title}

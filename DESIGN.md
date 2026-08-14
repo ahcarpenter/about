@@ -347,7 +347,7 @@ margins.
 
 The gutter is a constant `1.25rem` (20px) at every width, so the text block
 never touches the edge on a phone. Pages open at `3.5rem` top padding, `5rem`
-from the `sm` breakpoint up. Home-page sections are separated by `5rem`, the
+from the `sm` breakpoint up. Home-page sections are separated by `6rem`, the
 timeline steps by `4rem`, and the footer is pushed off by `6rem`.
 
 The grid appears in only three places, and each is a real content shape rather

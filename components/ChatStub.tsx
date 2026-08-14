@@ -45,8 +45,14 @@ export default function ChatStub() {
     }, 900 + Math.random() * 700);
   }
 
+  // Frame height is fold-aware, not fixed: at a flat 32rem the composer landed
+  // ~60px below the fold on a 390x844 phone, so the one control this page
+  // exists for was invisible on arrival. It now takes whatever the viewport
+  // leaves after the header, heading and lede (~26rem), capped at the original
+  // 32rem so desktop is unchanged, floored at 20rem so a short window still
+  // gets a usable transcript.
   return (
-    <div className="card flex h-[32rem] flex-col overflow-hidden">
+    <div className="card flex h-[clamp(20rem,calc(100svh_-_26rem),32rem)] flex-col overflow-hidden">
       <div className="flex items-center gap-3 border-b border-line bg-paper/50 px-5 py-3">
         <span className="relative flex h-2.5 w-2.5">
           <span className="pulse-halo absolute inline-flex h-full w-full rounded-full bg-mark" />
@@ -64,10 +70,14 @@ export default function ChatStub() {
           </div>
         ))}
         {typing && (
-          <div className="msg msg-bot inline-flex items-center gap-1.5 py-3">
-            <span className="typing-dot" />
-            <span className="typing-dot" />
-            <span className="typing-dot" />
+          <div
+            role="status"
+            aria-label={`${site.firstName} is typing`}
+            className="msg msg-bot inline-flex items-center gap-1.5 py-3"
+          >
+            <span className="typing-dot" aria-hidden />
+            <span className="typing-dot" aria-hidden />
+            <span className="typing-dot" aria-hidden />
           </div>
         )}
       </div>

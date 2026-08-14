@@ -24,7 +24,8 @@ describe("GithubHighlights", () => {
     expect(screen.getByText("about")).toBeTruthy();
     expect(screen.getByText("personal site")).toBeTruthy();
     expect(screen.getByText("TypeScript")).toBeTruthy();
-    expect(screen.getByText("★ 12")).toBeTruthy();
+    expect(screen.getByLabelText("12 stars")).toBeTruthy();
+    expect(screen.getByLabelText("2 forks")).toBeTruthy();
   });
 
   it("renders a link-out fallback when there are no repos", () => {

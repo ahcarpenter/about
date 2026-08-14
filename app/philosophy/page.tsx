@@ -13,7 +13,7 @@ export default function PhilosophyPage() {
       <h1 className="display text-4xl sm:text-6xl">
         How I try to <em>think</em>
       </h1>
-      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-soft">
+      <p className="mt-6 max-w-xl text-lg leading-relaxed text-soft">
         A working set of principles — written down so they can be argued with,
         revised when they lose, and actually used in the meantime.
       </p>
@@ -30,18 +30,24 @@ export default function PhilosophyPage() {
           <Reveal key={p.title} delay={Math.min(i, 2) * 60}>
             <section>
               <h2 className="display text-2xl">{p.title}</h2>
-              <p className="mt-3 max-w-2xl leading-relaxed text-soft">{p.body}</p>
+              {/* max-w-xl, matching the timeline body on /story: at max-w-2xl
+                  this ran 90 characters a line on a desktop — the widest
+                  measure on the site, on the page that exists to be read. */}
+              <p className="mt-3 max-w-xl leading-relaxed text-soft">{p.body}</p>
             </section>
           </Reveal>
         ))}
       </div>
 
       <Reveal>
-        <p className="mt-16 border-t border-line pt-8 text-sm leading-relaxed text-muted">
-          These are principles, not laws — version-controlled like everything
-          else here. If you think one of them is wrong, I’d genuinely like to
-          hear the argument.
-        </p>
+        {/* The rule spans the column; the sentence keeps the page's measure. */}
+        <div className="mt-16 border-t border-line pt-8">
+          <p className="max-w-xl text-sm leading-relaxed text-muted">
+            These are principles, not laws — version-controlled like everything
+            else here. If you think one of them is wrong, I’d genuinely like to
+            hear the argument.
+          </p>
+        </div>
       </Reveal>
     </div>
   );
