@@ -14,19 +14,20 @@ export default function Footer() {
             <span className="text-accent">.</span>
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
-            {site.tagline} Thanks for stopping by — say hi on any of the
-            platforms to the right.
+            {site.tagline} Thanks for stopping by — say hi anytime.
           </p>
         </div>
 
         <div>
           <p className="label">Pages</p>
+          {/* The `before:` band takes each row from its 40px face to the 44px
+              hit area, without adding padding that would stretch the column. */}
           <ul className="mt-1">
             {navLinks.map((p) => (
               <li key={p.href}>
                 <Link
                   href={p.href}
-                  className="inline-block py-2.5 text-sm text-soft transition-colors hover:text-accent"
+                  className="relative tap-target inline-block py-2.5 text-sm text-soft transition-colors before:inset-x-0 before:-inset-y-0.5 hover:text-accent"
                 >
                   {p.label}
                 </Link>
@@ -42,7 +43,7 @@ export default function Footer() {
               <li key={e.href}>
                 <ExternalLink
                   href={e.href}
-                  className="inline-block py-2.5 text-sm text-soft transition-colors hover:text-accent"
+                  className="relative tap-target inline-block py-2.5 text-sm text-soft transition-colors before:inset-x-0 before:-inset-y-0.5 hover:text-accent"
                 >
                   {e.label} ↗
                 </ExternalLink>

@@ -22,7 +22,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3.5">
         <Link
           href="/"
-          className="display relative text-lg leading-none tracking-tight transition-colors before:absolute before:-inset-x-2 before:-inset-y-3 before:content-[''] hover:text-accent"
+          className="display relative tap-target text-lg leading-none tracking-tight transition-colors before:-inset-x-2 before:-inset-y-3.5 hover:text-accent"
         >
           {site.shortName}
           <span className="text-accent">.</span>
@@ -33,7 +33,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className={`relative rounded-full px-3 py-1.5 text-sm font-medium transition-[color,background-color,scale] before:absolute before:inset-x-0 before:-inset-y-1.5 before:content-[''] active:scale-[0.96] ${
+              className={`relative tap-target rounded-full px-3 py-1.5 text-sm font-medium transition-[color,background-color,scale] before:inset-x-0 before:-inset-y-1.5 active:scale-[0.96] ${
                 isActive(l.href)
                   ? "bg-accent-soft text-accent-deep"
                   : "text-soft hover:bg-surface hover:text-ink"
@@ -45,7 +45,7 @@ export default function Header() {
           {cta && (
             <Link
               href={cta.href}
-              className="btn btn-mark relative ml-1 px-4 py-1.5 text-sm before:absolute before:inset-x-0 before:-inset-y-1 before:content-['']"
+              className="btn btn-mark relative tap-target ml-1 px-4 py-1.5 text-sm before:inset-x-0 before:-inset-y-1"
             >
               <span className="sm:hidden">{cta.label}</span>
               <span className="hidden sm:inline">{cta.label} with me</span>

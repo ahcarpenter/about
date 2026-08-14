@@ -5,7 +5,11 @@ import { site } from "@/lib/site";
 
 export default function Hero() {
   return (
-    <section className="mx-auto grid max-w-5xl items-center gap-10 px-5 pb-16 pt-14 sm:pt-20 md:grid-cols-[1.2fr_0.8fr]">
+    // items-start, not items-center: centred, the name floated ~50px below the
+    // portrait's top edge at lg and up, so the photograph — a face, and the
+    // highest-salience object on the page — owned the top of the hero. Aligned
+    // to the top, the name leads and the two columns share one edge.
+    <section className="mx-auto grid max-w-5xl items-start gap-10 px-5 pb-16 pt-14 sm:pt-20 md:grid-cols-[1.2fr_0.8fr]">
       <div>
         <h1 className="display text-5xl sm:text-6xl md:text-7xl">
           Andrew <em>Carpenter</em>
@@ -32,16 +36,22 @@ export default function Hero() {
           <Link href="/philosophy/" className="btn btn-secondary">
             What I believe
           </Link>
+          {/* No px-2: when the row wraps below md this link drops to its own
+              line, and the padding pushed its text 8px off the left edge the
+              two buttons above it establish. The band restores the 44px. */}
           <Link
             href="/chat/"
-            className="px-2 py-2.5 text-sm font-medium text-muted transition-colors hover:text-accent"
+            className="relative tap-target py-2.5 text-sm font-medium text-muted transition-colors before:inset-x-0 before:-inset-y-0.5 hover:text-accent"
           >
             or just ask me →
           </Link>
         </div>
       </div>
 
-      <div className="relative mx-auto w-56 sm:w-64 md:w-full md:max-w-[280px]">
+      {/* Centred only once it has its own column. Below md it stacks under a
+          left-aligned name, lede and button row, and mx-auto there put the one
+          image on a second alignment axis. */}
+      <div className="relative w-56 sm:w-64 md:mx-auto md:w-full md:max-w-[280px]">
         <div aria-hidden className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl border border-line-strong bg-paper" />
         <div className="card relative overflow-hidden rounded-2xl p-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}

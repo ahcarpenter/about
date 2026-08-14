@@ -103,6 +103,19 @@
 }
 
 @layer components {
+  /*
+    Invisible tap-target expander for controls whose rendered face is smaller
+    than the Hidden 44 Rule. Pair with `relative` on the element itself and a
+    `before:inset-*` utility stating how far it must reach — the reach differs
+    per site because it depends on that element's own rendered size, so only
+    the always-identical mechanism (an absolutely positioned, empty
+    pseudo-element) is centralized here.
+  */
+  .tap-target::before {
+    content: "";
+    position: absolute;
+  }
+
   /* Faint paper grain over the whole page */
   .grain::before {
     content: "";
